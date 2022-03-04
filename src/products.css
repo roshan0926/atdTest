@@ -1,4 +1,51 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 0px 100px 100px;
+  top: 0;
+}
+
+.form {
+  display: flex;
+  gap: 1em;
+}
+
+.table {
+  margin: 2em;
+}
+
+.titles {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  border: 1px solid black;
+}
+
+.table-items {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100px;
+}
+
+td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   width: 100px;
-  height: 100px;
 }
