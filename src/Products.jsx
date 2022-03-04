@@ -3,15 +3,22 @@ import './products.css'
 import axios from 'axios';
 import Loader from './Loader'
 const Products = () => {
-  const apiUrl = 'https://atd.atdtravel.com/api/products?geo=en&limit=100'
+  const apiUrl1 = 'https://atd.atdtravel.com/api/products?geo=en&limit=20'
+  const apiUrl2 = 'https://atd.atdtravel.com/api/products?geo=en&limit=200'
   const [products, setProducts] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   useEffect(() => {
-    axios.get(apiUrl).then((res) => {
+    axios.get(apiUrl1).then((res) => {
       setProducts(res.data.data)
     })
       .catch(error => { console.log(error) })
-  }, [searchTerm])
+  }, [apiUrl1])
+  useEffect(() => {
+    axios.get(apiUrl2).then((res) => {
+      setProducts(res.data.data)
+    })
+      .catch(error => { console.log(error) })
+  }, [apiUrl2])
 
   if (products) {
 
