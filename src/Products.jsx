@@ -22,7 +22,6 @@ const Products = () => {
           <div className="form">
             <span htmlFor='search'>Title:</span>
             <input onChange={(e) => { setSearchTerm(e.target.value) }} type='text' id='search' placeholder='Search...'></input>
-            <button>Search</button>
           </div>
         </header>
         <table className="table">
@@ -61,7 +60,6 @@ const Products = () => {
         <div className="form">
           <span htmlFor='search'>Title:</span>
           <input onChange={(e) => { setSearchTerm(e.target.value) }} type='text' id='search' placeholder='Search...'></input>
-          <button>Search</button>
         </div>
       </header>
       <Loader />
@@ -72,6 +70,3 @@ const Products = () => {
 }
 
 export default Products
-
-
-// https://global.atdtravel.com/api/products?geo=en&title=disney
