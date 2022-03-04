@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './products.css'
 import axios from 'axios';
+import Loader from './Loader'
 const Products = () => {
-  const apiUrl = 'https://atd.atdtravel.com/api/products?geo=en'
+  const apiUrl = 'https://atd.atdtravel.com/api/products?geo=en&limit=100'
   const [products, setProducts] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   useEffect(() => {
@@ -54,7 +55,7 @@ const Products = () => {
     )
 
   } else {
-    return (
+    return (<div>
       <header className="header">
         <h1>Product Search</h1>
         <div className="form">
@@ -63,6 +64,8 @@ const Products = () => {
           <button>Search</button>
         </div>
       </header>
+      <Loader />
+      </div>
     )
   }
 
