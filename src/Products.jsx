@@ -66,7 +66,7 @@ const Products = () => {
         <h1>Product Search</h1>
         <div className="form">
           <span htmlFor='search'>Title:</span>
-          <input onChange={(e) => { setSearchTerm(e.target.value) }} type='text' id='search' placeholder='Search...'></input>
+          <input className='search' onChange={(e) => { setSearchTerm(e.target.value) }} type='text' id='search' placeholder='Search...'></input>
         </div>
       </header>
       <Loader />

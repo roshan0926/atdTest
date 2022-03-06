@@ -1,16 +1,16 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(141, 141, 141);
+  background-color: rgb(216, 214, 214);
 }
 
 .header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 20px 0px 100px 100px;
+  padding: 20px 0px 50px 50px;
   top: 0;
-  font-family: 'League Gothic', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 2em;
 }
 
@@ -18,12 +18,18 @@ body {
   display: flex;
   gap: 1em;
 }
+
 .search {
   border: none;
   border-radius: 10px;
+  font-size: 0.75em;
+}
+.search:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.search:focus-visible {
+ outline: solid black 1px;
+}
 .table {
   margin: 2em;
 }
@@ -37,7 +43,7 @@ body {
   margin-bottom: 1em;
   border: 1px solid black;
   border-radius: 10px;
-  font-family: 'Smooch Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 2em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
