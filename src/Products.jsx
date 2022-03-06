@@ -28,7 +28,7 @@ const Products = () => {
           <h1>Product Search</h1>
           <div className="form">
             <span htmlFor='search'>Title:</span>
-            <input className='search' onChange={(e) => { setSearchTerm(e.target.value) }} type='text' id='search' placeholder='Search...'></input>
+            <input className='search' onChange={(e) => { setSearchTerm(e.target.value.split(' ').join('')) }} type='text' id='search' placeholder='Search...'></input>
           </div>
         </header>
         <table className="table">
@@ -44,7 +44,7 @@ const Products = () => {
               products.filter((val) => {
                 if (searchTerm == "") {
                   return val
-                } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                } else if (val.title.toLowerCase().split(' ').join('').includes(searchTerm.toLowerCase())) {
                   return val
                 }
               }).map((product) => {
